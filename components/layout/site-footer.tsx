@@ -31,43 +31,27 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             </ul>
           </div>
         ))}
+
         <div className="col-span-full flex flex-col items-end sm:col-span-1 md:col-span-2">
+          <p className="mb-3 text-sm font-medium text-foreground">
+            Product updates
+          </p>
           <NewsletterForm />
         </div>
       </div>
 
       <div className="border-t py-4">
-        <div className="container flex max-w-6xl items-center justify-between">
-          {/* <span className="text-muted-foreground text-sm">
-            Copyright &copy; 2024. All rights reserved.
-          </span> */}
+        <div className="container flex max-w-6xl flex-col items-start justify-between gap-3 md:flex-row md:items-center">
           <p className="text-left text-sm text-muted-foreground">
-            Built by{" "}
+            <span className="font-medium text-foreground">LLMHub</span> helps
+            teams run AI agents on isolated virtual machines with deterministic
+            execution, auditable runs, and secure controls.
+            <span className="mx-2">·</span>
             <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
+              href={`mailto:${siteConfig.mailSupport}`}
               className="font-medium underline underline-offset-4"
             >
-              mickasmt
-            </Link>
-            . Hosted on{" "}
-            <Link
-              href="https://vercel.com"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Vercel
-            </Link>
-            . Illustrations by{" "}
-            <Link
-              href="https://popsy.co"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Popsy
+              {siteConfig.mailSupport}
             </Link>
           </p>
 
@@ -79,6 +63,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
               className="font-medium underline underline-offset-4"
             >
               <Icons.gitHub className="size-5" />
+              <span className="sr-only">GitHub</span>
             </Link>
             <ModeToggle />
           </div>

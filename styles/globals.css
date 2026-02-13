@@ -24,7 +24,7 @@
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --radius: 0.5rem;
-    
+
     --chart-1: 271.5 81.3% 55.9%;
     --chart-2: 270 95% 75%;
     --chart-3: 270 91% 65%;
@@ -59,16 +59,23 @@
     --chart-4: 269 97% 85%;
     --chart-5: 269 100% 92%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  .gradient-blinds-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 }
 
@@ -78,9 +85,72 @@
   }
 
   .step:before {
-    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background;
+    @apply absolute inline-flex h-9 w-9 items-center justify-center rounded-full border-4 border-background bg-muted text-center -indent-px font-mono text-base font-medium;
     @apply ml-[-50px] mt-[-4px];
     content: counter(step);
+  }
+
+  .landing-glass {
+    @apply border border-white/20 bg-white/65 backdrop-blur-xl dark:border-white/10 dark:bg-black/35;
+  }
+
+  .animate-shiny-text {
+    animation: shiny-text 8s infinite;
+  }
+
+  .animate-shimmer-slide {
+    animation: shimmer-slide var(--speed) ease-in-out infinite alternate;
+  }
+
+  .animate-spin-around {
+    animation: spin-around calc(var(--speed) * 2) infinite linear;
+  }
+}
+
+@keyframes shiny-text {
+  0%,
+  90%,
+  100% {
+    background-position: calc(-100% - var(--shiny-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shiny-width)) 0;
+  }
+}
+
+@keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+  }
+}
+
+@keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0deg);
+  }
+
+  15%,
+  35% {
+    transform: translateZ(0) rotate(90deg);
+  }
+
+  65%,
+  85% {
+    transform: translateZ(0) rotate(270deg);
+  }
+
+  100% {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shiny-text,
+  .animate-shimmer-slide,
+  .animate-spin-around {
+    animation: none !important;
   }
 }
 

@@ -4,44 +4,44 @@ import { env } from "@/env.mjs";
 const site_url = env.NEXT_PUBLIC_APP_URL;
 
 export const siteConfig: SiteConfig = {
-  name: "SaaS Starter",
+  name: "LLMHub",
   description:
-    "Get your project off to an explosive start with SaaS Starter! Harness the power of Next.js 14, Prisma, Neon, Auth.js v5, Resend, React Email, Shadcn/ui and Stripe to build your next big thing.",
+    "Run AI agents on isolated virtual machines directly in your browser. LLMHub gives teams a secure, deterministic, and observable execution platform.",
   url: site_url,
   ogImage: `${site_url}/_static/og.jpg`,
   links: {
-    twitter: "https://twitter.com/miickasmt",
-    github: "https://github.com/mickasmt/next-saas-stripe-starter",
+    twitter: "https://x.com/llmhubdev",
+    github: "https://github.com/llmhub-dev",
   },
-  mailSupport: "support@saas-starter.com",
+  mailSupport: "support@llmhub.dev",
 };
 
 export const footerLinks: SidebarNavItem[] = [
   {
+    title: "Platform",
+    items: [
+      { title: "How It Works", href: "/#how-it-works" },
+      { title: "Ecosystem", href: "/#ecosystem" },
+      { title: "Use Cases", href: "/#use-cases" },
+      { title: "Pricing", href: "/pricing" },
+    ],
+  },
+  {
+    title: "Resources",
+    items: [
+      { title: "Documentation", href: "/docs" },
+      { title: "Blog", href: "/blog" },
+      { title: "Privacy", href: "/privacy" },
+      { title: "Terms", href: "/terms" },
+    ],
+  },
+  {
     title: "Company",
     items: [
-      { title: "About", href: "#" },
-      { title: "Enterprise", href: "#" },
-      { title: "Terms", href: "/terms" },
-      { title: "Privacy", href: "/privacy" },
-    ],
-  },
-  {
-    title: "Product",
-    items: [
-      { title: "Security", href: "#" },
-      { title: "Customization", href: "#" },
-      { title: "Customers", href: "#" },
-      { title: "Changelog", href: "#" },
-    ],
-  },
-  {
-    title: "Docs",
-    items: [
-      { title: "Introduction", href: "#" },
-      { title: "Installation", href: "#" },
-      { title: "Components", href: "#" },
-      { title: "Code Blocks", href: "#" },
+      { title: "Contact", href: `mailto:${siteConfig.mailSupport}` },
+      { title: "Status", href: "#" },
+      { title: "Security", href: "/#runtime-proof" },
+      { title: "Register", href: "/register" },
     ],
   },
 ];
