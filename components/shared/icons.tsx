@@ -24,7 +24,6 @@ import {
   MoreVertical,
   Package,
   Plus,
-  Puzzle,
   Search,
   Settings,
   SunMedium,
@@ -103,7 +102,27 @@ export const Icons = {
   home: Home,
   laptop: Laptop,
   lineChart: LineChart,
-  logo: Puzzle,
+  logo: ({ ...props }: LucideProps) => (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      data-icon="llmhub-logo"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M18 44C30 44 30 20 42 20"
+        stroke="currentColor"
+        strokeWidth="9"
+        strokeLinecap="round"
+      />
+      <circle cx="14" cy="44" r="7" stroke="currentColor" strokeWidth="7" />
+      <circle cx="46" cy="20" r="7" stroke="currentColor" strokeWidth="7" />
+    </svg>
+  ),
   media: Image,
   messages: MessagesSquare,
   moon: Moon,

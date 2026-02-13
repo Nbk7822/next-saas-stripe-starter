@@ -22,6 +22,15 @@ interface NavBarProps {
   large?: boolean;
 }
 
+const brandSectionLinks = [
+  { char: "L", href: "/#open-source" },
+  { char: "L", href: "/#features" },
+  { char: "M", href: "/#reviews" },
+  { char: "H", href: "/#pricing" },
+  { char: "U", href: "/#social-links" },
+  { char: "B", href: "/#top" },
+];
+
 export function NavBar({ scroll = false }: NavBarProps) {
   const scrolled = useScroll(50);
   const { data: session, status } = useSession();
@@ -48,12 +57,29 @@ export function NavBar({ scroll = false }: NavBarProps) {
         large={documentation}
       >
         <div className="flex gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-1.5">
-            <Icons.logo />
-            <span className="font-urban text-xl font-bold">
-              {siteConfig.name}
-            </span>
-          </Link>
+          <div className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center">
+              <Icons.logo className="size-6" />
+              <span className="sr-only">{siteConfig.name}</span>
+            </Link>
+            {documentation ? (
+              <Link href="/" className="font-urban text-xl font-bold">
+                {siteConfig.name}
+              </Link>
+            ) : (
+              <div className="font-urban text-xl font-bold tracking-[0.08em]">
+                {brandSectionLinks.map((item, index) => (
+                  <Link
+                    key={`${item.char}-${index}`}
+                    href={item.href}
+                    className="landing-toolbar-word inline-block text-foreground/85 hover:text-foreground"
+                  >
+                    {item.char}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           {links && links.length > 0 ? (
             <nav className="hidden gap-6 md:flex">
@@ -63,7 +89,7 @@ export function NavBar({ scroll = false }: NavBarProps) {
                   href={item.disabled ? "#" : item.href}
                   prefetch={true}
                   className={cn(
-                    "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+                    "landing-toolbar-word flex items-center text-lg font-medium hover:text-foreground/80 sm:text-sm",
                     item.href.startsWith(`/${selectedLayout}`)
                       ? "text-foreground"
                       : "text-foreground/60",

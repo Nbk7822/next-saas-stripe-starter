@@ -3,24 +3,24 @@ import { MarketingConfig } from "types";
 export const marketingConfig: MarketingConfig = {
   mainNav: [
     {
-      title: "How It Works",
-      href: "/#how-it-works",
+      title: "Open Source",
+      href: "/#open-source",
     },
     {
-      title: "Ecosystem",
-      href: "/#ecosystem",
+      title: "Features",
+      href: "/#features",
     },
     {
-      title: "Use Cases",
-      href: "/#use-cases",
+      title: "Reviews",
+      href: "/#reviews",
     },
     {
       title: "Pricing",
-      href: "/pricing",
+      href: "/#pricing",
     },
     {
-      title: "Docs",
-      href: "/docs",
+      title: "Social",
+      href: "/#social-links",
     },
   ],
 };
