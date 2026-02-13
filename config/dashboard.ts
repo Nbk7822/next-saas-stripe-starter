@@ -4,15 +4,45 @@ import { SidebarNavItem } from "types";
 
 export const sidebarLinks: SidebarNavItem[] = [
   {
-    title: "MENU",
+    title: "WORKSPACE",
     items: [
+      {
+        href: "/dashboard?workspace=dashboard",
+        icon: "dashboard",
+        title: "Dashboard",
+      },
+      {
+        href: "/dashboard?workspace=launch",
+        icon: "add",
+        title: "Launch Machine",
+      },
+      {
+        href: "/dashboard?workspace=machines",
+        icon: "laptop",
+        title: "Machines",
+      },
+      { href: "/dashboard?workspace=scripts", icon: "post", title: "Scripts" },
+      {
+        href: "/dashboard?workspace=settings",
+        icon: "settings",
+        title: "Settings",
+      },
+    ],
+  },
+  {
+    title: "PAGES",
+    items: [
+      {
+        href: "/dashboard/profile",
+        icon: "user",
+        title: "Profile",
+      },
       {
         href: "/admin",
         icon: "laptop",
         title: "Admin Panel",
         authorizeOnly: UserRole.ADMIN,
       },
-      { href: "/dashboard", icon: "dashboard", title: "Dashboard" },
       {
         href: "/dashboard/billing",
         icon: "billing",
@@ -28,27 +58,12 @@ export const sidebarLinks: SidebarNavItem[] = [
         authorizeOnly: UserRole.ADMIN,
       },
       {
-        href: "#/dashboard/posts",
-        icon: "post",
-        title: "User Posts",
-        authorizeOnly: UserRole.USER,
-        disabled: true,
+        href: "/dashboard/support",
+        icon: "messages",
+        title: "Support & Feedback",
       },
-    ],
-  },
-  {
-    title: "OPTIONS",
-    items: [
-      { href: "/dashboard/settings", icon: "settings", title: "Settings" },
       { href: "/", icon: "home", title: "Homepage" },
       { href: "/docs", icon: "bookOpen", title: "Documentation" },
-      {
-        href: "#",
-        icon: "messages",
-        title: "Support",
-        authorizeOnly: UserRole.USER,
-        disabled: true,
-      },
     ],
   },
 ];

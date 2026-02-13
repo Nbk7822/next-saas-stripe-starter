@@ -219,7 +219,7 @@ const plans: PricingPlan[] = [
 ];
 
 const sectionTitleClass =
-  "text-[11px] font-semibold uppercase tracking-[0.22em] text-foreground/55";
+  "text-[11px] font-semibold tracking-[0.22em] text-foreground/55";
 
 export function LlmhubProfileLayout() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -299,9 +299,9 @@ export function LlmhubProfileLayout() {
             >
               <div className="grid xl:grid-cols-[1fr_3fr]">
                 <div className="border-foreground/12 border-b p-6 md:p-7 xl:border-b-0 xl:border-r">
-                  <p className={sectionTitleClass}>OPEN SOURCE</p>
-                  <h2 className="mt-3 font-sans text-3xl font-bold uppercase leading-[1.05] text-foreground md:text-4xl">
-                    WE ARE OPEN SOURCE!!
+                  <p className={sectionTitleClass}>Open source</p>
+                  <h2 className="mt-3 font-sans text-3xl font-bold leading-[1.05] text-foreground md:text-4xl">
+                    We are open source!!
                   </h2>
                   <p className="mt-4 text-sm leading-relaxed text-foreground/65">
                     Build with us in public. Star, fork, and contribute to our
@@ -311,7 +311,7 @@ export function LlmhubProfileLayout() {
                     href="https://github.com/LLmHub-dev/open-computer-use"
                     target="_blank"
                     rel="noreferrer"
-                    className="landing-hover-tab mt-6 inline-flex items-center gap-2 rounded-2xl border border-foreground/15 bg-background/80 px-4 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-foreground/85 transition-colors hover:border-foreground/35"
+                    className="landing-hover-tab mt-6 inline-flex items-center gap-2 rounded-2xl border border-foreground/15 bg-background/80 px-4 py-3 text-sm font-semibold tracking-[0.08em] text-foreground/85 transition-colors hover:border-foreground/35"
                   >
                     <Github className="size-4" />
                     We are Open Source!!
@@ -343,9 +343,9 @@ export function LlmhubProfileLayout() {
               id="features"
               className="landing-glass landing-hover-box rounded-3xl p-6 md:p-7"
             >
-              <p className={sectionTitleClass}>FEATURES</p>
-              <h2 className="mt-3 font-sans text-3xl font-bold uppercase leading-[1.05] text-foreground md:text-5xl">
-                ENGINEERED FOR CONTINUOUS AGENT WORK.
+              <p className={sectionTitleClass}>Features</p>
+              <h2 className="mt-3 font-sans text-3xl font-bold leading-[1.05] text-foreground md:text-5xl">
+                Engineered for continuous agent work.
               </h2>
 
               <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -376,9 +376,9 @@ export function LlmhubProfileLayout() {
             >
               <div className="grid xl:grid-cols-[3fr_1fr]">
                 <div className="p-6 md:p-7">
-                  <p className={sectionTitleClass}>REVIEWS</p>
-                  <h2 className="mt-3 font-sans text-3xl font-bold uppercase leading-[1.05] text-foreground md:text-5xl">
-                    WHAT BUILDERS SAY.
+                  <p className={sectionTitleClass}>Reviews</p>
+                  <h2 className="mt-3 font-sans text-3xl font-bold leading-[1.05] text-foreground md:text-5xl">
+                    What builders say.
                   </h2>
 
                   <div className="mt-6 grid gap-4 lg:grid-cols-2">
@@ -414,7 +414,7 @@ export function LlmhubProfileLayout() {
                   id="social-links"
                   className="border-foreground/12 border-t p-6 md:p-7 xl:border-l xl:border-t-0"
                 >
-                  <h3 className={sectionTitleClass}>SOCIAL LINKS</h3>
+                  <h3 className={sectionTitleClass}>Social links</h3>
                   <div className="mt-4 grid gap-3">
                     {socials.map((social) => {
                       const Icon = social.icon;
@@ -427,7 +427,7 @@ export function LlmhubProfileLayout() {
                           rel="noreferrer"
                           className="landing-hover-tab group flex h-16 items-center justify-between rounded-2xl border border-foreground/15 bg-background/80 px-4 text-foreground/85 transition-colors hover:border-foreground/35"
                         >
-                          <span className="inline-flex items-center gap-2.5 text-sm font-medium uppercase tracking-[0.12em]">
+                          <span className="inline-flex items-center gap-2.5 text-sm font-medium tracking-[0.12em]">
                             <Icon
                               className={`size-4 shrink-0 ${social.iconClassName}`}
                             />
@@ -448,9 +448,9 @@ export function LlmhubProfileLayout() {
               id="pricing"
               className="landing-glass landing-hover-box rounded-3xl p-6 md:p-7"
             >
-              <p className={sectionTitleClass}>PRICING</p>
-              <h2 className="mt-3 font-sans text-3xl font-bold uppercase leading-[1.05] text-foreground md:text-5xl">
-                PICK YOUR AUTOMATION TIER.
+              <p className={sectionTitleClass}>Pricing</p>
+              <h2 className="mt-3 font-sans text-3xl font-bold leading-[1.05] text-foreground md:text-5xl">
+                Pick your automation tier.
               </h2>
 
               <div className="mt-6 grid gap-4 lg:grid-cols-3">
@@ -472,7 +472,7 @@ export function LlmhubProfileLayout() {
                         </span>
                       ) : null}
 
-                      <h3 className="font-sans text-2xl font-bold uppercase text-foreground">
+                      <h3 className="font-sans text-2xl font-bold text-foreground">
                         {plan.name}
                       </h3>
                       <p className="mt-2 min-h-[56px] text-sm leading-relaxed text-foreground/65">

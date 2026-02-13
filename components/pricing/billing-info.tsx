@@ -1,7 +1,8 @@
-import Link from "next/link";
 import * as React from "react";
+import Link from "next/link";
 
-import { CustomerPortalButton } from "@/components/forms/customer-portal-button";
+import { UserSubscriptionPlan } from "types";
+import { cn, formatDate } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -11,8 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn, formatDate } from "@/lib/utils";
-import { UserSubscriptionPlan } from "types";
+import { CustomerPortalButton } from "@/components/forms/customer-portal-button";
 
 interface BillingInfoProps extends React.HTMLAttributes<HTMLFormElement> {
   userSubscriptionPlan: UserSubscriptionPlan;
@@ -29,7 +29,7 @@ export function BillingInfo({ userSubscriptionPlan }: BillingInfoProps) {
   } = userSubscriptionPlan;
 
   return (
-    <Card>
+    <Card className="landing-hover-box">
       <CardHeader>
         <CardTitle>Subscription Plan</CardTitle>
         <CardDescription>
@@ -37,7 +37,7 @@ export function BillingInfo({ userSubscriptionPlan }: BillingInfoProps) {
         </CardDescription>
       </CardHeader>
       <CardContent>{description}</CardContent>
-      <CardFooter className="flex flex-col items-center space-y-2 border-t bg-accent py-2 md:flex-row md:justify-between md:space-y-0">
+      <CardFooter className="flex flex-col items-center space-y-2 border-t border-white/15 bg-white/65 py-3 dark:border-white/10 dark:bg-white/5 md:flex-row md:justify-between md:space-y-0">
         {isPaid ? (
           <p className="text-sm font-medium text-muted-foreground">
             {isCanceled

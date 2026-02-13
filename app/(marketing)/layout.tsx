@@ -20,9 +20,9 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
           blindMinWidth={92}
           mouseDampening={0.16}
           mirrorGradient
-          spotlightRadius={0.28}
+          spotlightRadius={0.22}
           spotlightSoftness={1.5}
-          spotlightOpacity={0.35}
+          spotlightOpacity={0.33}
           distortAmount={0.1}
           shineDirection="left"
           mixBlendMode="normal"

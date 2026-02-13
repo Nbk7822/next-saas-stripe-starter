@@ -21,7 +21,7 @@ import {
 
 export default function TransactionsList() {
   return (
-    <Card className="xl:col-span-2">
+    <Card className="landing-hover-box xl:col-span-2">
       <CardHeader className="flex flex-row items-center">
         <div className="grid gap-2">
           <CardTitle>Transactions</CardTitle>
@@ -29,7 +29,10 @@ export default function TransactionsList() {
             Recent transactions from your store.
           </CardDescription>
         </div>
-        <Button size="sm" className="ml-auto shrink-0 gap-1 px-4">
+        <Button
+          size="sm"
+          className="landing-hover-tab ml-auto shrink-0 gap-1 rounded-xl px-4"
+        >
           <Link href="#" className="flex items-center gap-2">
             <span>View All</span>
             <ArrowUpRight className="hidden size-4 sm:block" />

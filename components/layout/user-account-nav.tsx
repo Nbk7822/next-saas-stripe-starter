@@ -38,7 +38,7 @@ export function UserAccountNav() {
         <Drawer.Trigger onClick={() => setOpen(true)}>
           <UserAvatar
             user={{ name: user.name || null, image: user.image || null }}
-            className="size-9 border"
+            className="landing-hover-tab size-9 border border-white/25 bg-white/70 backdrop-blur-xl dark:border-white/15 dark:bg-black/35"
           />
         </Drawer.Trigger>
         <Drawer.Portal>
@@ -46,7 +46,7 @@ export function UserAccountNav() {
             className="fixed inset-0 z-40 h-full bg-background/80 backdrop-blur-sm"
             onClick={closeDrawer}
           />
-          <Drawer.Content className="fixed inset-x-0 bottom-0 z-50 mt-24 overflow-hidden rounded-t-[10px] border bg-background px-3 text-sm">
+          <Drawer.Content className="fixed inset-x-0 bottom-0 z-50 mt-24 overflow-hidden rounded-t-[14px] border border-white/20 bg-white/90 px-3 text-sm backdrop-blur-2xl dark:border-white/15 dark:bg-black/75">
             <div className="sticky top-0 z-20 flex w-full items-center justify-center bg-inherit">
               <div className="my-3 h-1.5 w-16 rounded-full bg-muted-foreground/20" />
             </div>
@@ -64,7 +64,7 @@ export function UserAccountNav() {
 
             <ul role="list" className="mb-14 mt-1 w-full text-muted-foreground">
               {user.role === "ADMIN" ? (
-                <li className="rounded-lg text-foreground hover:bg-muted">
+                <li className="landing-hover-tab rounded-lg border border-transparent text-foreground hover:border-white/20 hover:bg-white/75 dark:hover:border-white/15 dark:hover:bg-white/10">
                   <Link
                     href="/admin"
                     onClick={closeDrawer}
@@ -76,7 +76,7 @@ export function UserAccountNav() {
                 </li>
               ) : null}
 
-              <li className="rounded-lg text-foreground hover:bg-muted">
+              <li className="landing-hover-tab rounded-lg border border-transparent text-foreground hover:border-white/20 hover:bg-white/75 dark:hover:border-white/15 dark:hover:bg-white/10">
                 <Link
                   href="/dashboard"
                   onClick={closeDrawer}
@@ -87,7 +87,7 @@ export function UserAccountNav() {
                 </Link>
               </li>
 
-              <li className="rounded-lg text-foreground hover:bg-muted">
+              <li className="landing-hover-tab rounded-lg border border-transparent text-foreground hover:border-white/20 hover:bg-white/75 dark:hover:border-white/15 dark:hover:bg-white/10">
                 <Link
                   href="/dashboard/settings"
                   onClick={closeDrawer}
@@ -99,7 +99,7 @@ export function UserAccountNav() {
               </li>
 
               <li
-                className="rounded-lg text-foreground hover:bg-muted"
+                className="landing-hover-tab rounded-lg border border-transparent text-foreground hover:border-white/20 hover:bg-white/75 dark:hover:border-white/15 dark:hover:bg-white/10"
                 onClick={(event) => {
                   event.preventDefault();
                   signOut({
@@ -125,7 +125,7 @@ export function UserAccountNav() {
       <DropdownMenuTrigger>
         <UserAvatar
           user={{ name: user.name || null, image: user.image || null }}
-          className="size-8 border"
+          className="landing-hover-tab size-8 border border-white/25 bg-white/70 backdrop-blur-xl dark:border-white/15 dark:bg-black/35"
         />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

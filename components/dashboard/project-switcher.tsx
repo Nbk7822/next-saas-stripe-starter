@@ -50,16 +50,13 @@ export default function ProjectSwitcher({
       <Popover open={openPopover} onOpenChange={setOpenPopover}>
         <PopoverTrigger>
           <Button
-            className="h-8 px-2"
+            className="landing-hover-tab h-8 rounded-xl border border-transparent px-2 text-foreground/80 hover:border-white/25 hover:bg-white/65 hover:text-foreground dark:hover:border-white/15 dark:hover:bg-white/10"
             variant={openPopover ? "secondary" : "ghost"}
             onClick={() => setOpenPopover(!openPopover)}
           >
             <div className="flex items-center space-x-3 pr-2">
               <div
-                className={cn(
-                  "size-3 shrink-0 rounded-full",
-                  selected.color,
-                )}
+                className={cn("size-3 shrink-0 rounded-full", selected.color)}
               />
               <div className="flex items-center space-x-3">
                 <span
@@ -78,7 +75,10 @@ export default function ProjectSwitcher({
             />
           </Button>
         </PopoverTrigger>
-        <PopoverContent align="start" className="max-w-60 p-2">
+        <PopoverContent
+          align="start"
+          className="max-w-60 border-white/20 bg-white/85 p-2 backdrop-blur-xl dark:border-white/15 dark:bg-black/65"
+        >
           <ProjectList
             selected={selected}
             projects={projects}
@@ -106,7 +106,7 @@ function ProjectList({
           key={slug}
           className={cn(
             buttonVariants({ variant: "ghost" }),
-            "relative flex h-9 items-center gap-3 p-3 text-muted-foreground hover:text-foreground",
+            "landing-hover-tab relative flex h-9 items-center gap-3 rounded-xl border border-transparent p-3 text-muted-foreground hover:border-white/25 hover:bg-white/65 hover:text-foreground dark:hover:border-white/15 dark:hover:bg-white/10",
           )}
           href="#"
           onClick={() => setOpenPopover(false)}
@@ -130,7 +130,7 @@ function ProjectList({
       ))}
       <Button
         variant="outline"
-        className="relative flex h-9 items-center justify-center gap-2 p-2"
+        className="landing-hover-tab relative flex h-9 items-center justify-center gap-2 rounded-xl border-white/25 bg-white/70 p-2 dark:border-white/15 dark:bg-white/10"
         onClick={() => {
           setOpenPopover(false);
         }}

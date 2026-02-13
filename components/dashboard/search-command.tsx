@@ -41,7 +41,7 @@ export function SearchCommand({ links }: { links: SidebarNavItem[] }) {
       <Button
         variant="outline"
         className={cn(
-          "relative h-9 w-full justify-start rounded-md bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-72",
+          "landing-hover-tab relative h-9 w-full justify-start rounded-xl border-white/25 bg-white/70 text-sm font-normal text-muted-foreground shadow-none backdrop-blur-xl hover:bg-white/85 hover:text-foreground dark:border-white/15 dark:bg-black/35 dark:hover:bg-black/45 sm:pr-12 md:w-72",
         )}
         onClick={() => setOpen(true)}
       >
@@ -49,7 +49,7 @@ export function SearchCommand({ links }: { links: SidebarNavItem[] }) {
           Search
           <span className="hidden sm:inline-flex">&nbsp;documentation</span>...
         </span>
-        <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.45rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+        <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.45rem] hidden h-5 select-none items-center gap-1 rounded-md border border-white/25 bg-white/75 px-1.5 font-mono text-[10px] font-medium opacity-100 dark:border-white/15 dark:bg-black/35 sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>

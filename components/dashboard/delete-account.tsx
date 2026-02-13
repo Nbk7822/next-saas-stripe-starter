@@ -19,7 +19,7 @@ export function DeleteAccountSection() {
         title="Delete Account"
         description="This is a danger zone - Be careful !"
       >
-        <div className="flex flex-col gap-4 rounded-xl border border-red-400 p-4 dark:border-red-900">
+        <div className="landing-hover-box flex flex-col gap-4 rounded-2xl border border-red-400/45 bg-red-500/5 p-4 dark:border-red-900/70 dark:bg-red-500/5">
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <span className="text-[15px] font-medium">Are you sure ?</span>
@@ -43,6 +43,7 @@ export function DeleteAccountSection() {
             <Button
               type="submit"
               variant="destructive"
+              className="landing-hover-tab rounded-xl"
               onClick={() => setShowDeleteAccountModal(true)}
             >
               <Icons.trash className="mr-2 size-4" />

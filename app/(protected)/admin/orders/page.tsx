@@ -27,7 +27,7 @@ export default async function OrdersPage() {
         <EmptyPlaceholder.Description>
           You don&apos;t have any orders yet. Start ordering a product.
         </EmptyPlaceholder.Description>
-        <Button>Buy Products</Button>
+        <Button className="landing-hover-tab rounded-xl">Buy Products</Button>
       </EmptyPlaceholder>
     </>
   );

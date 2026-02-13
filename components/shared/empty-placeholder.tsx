@@ -13,7 +13,7 @@ export function EmptyPlaceholder({
   return (
     <div
       className={cn(
-        "flex flex-1 items-center justify-center rounded-lg border border-dashed p-8 text-center shadow-sm animate-in fade-in-50",
+        "landing-glass landing-hover-box flex flex-1 items-center justify-center rounded-2xl border border-dashed border-white/25 p-8 text-center shadow-sm animate-in fade-in-50 dark:border-white/15",
         className,
       )}
       {...props}
@@ -46,7 +46,7 @@ EmptyPlaceholder.Icon = function EmptyPlaceholderIcon({
   }
 
   return (
-    <div className="flex size-20 items-center justify-center rounded-full bg-muted">
+    <div className="flex size-20 items-center justify-center rounded-full border border-white/25 bg-white/80 dark:border-white/15 dark:bg-white/10">
       <Icon className={cn("size-10", className)} {...props} />
     </div>
   );
